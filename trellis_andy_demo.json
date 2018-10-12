@@ -1,0 +1,64 @@
+{
+    "ports" : {
+        "of:0000c4393af44bf3/1" : {
+            "interfaces" : [
+                {
+                    "ips" : [ "192.168.30.254/24" ],
+                    "vlan-untagged": 30
+                }
+            ]
+        },
+        "of:0000c4393af44019/2" : {
+            "interfaces" : [
+                {
+                    "ips" : [ "192.168.40.254/24" ],
+                    "vlan-untagged": 40
+                }
+            ]
+        }
+    },
+    "devices" : {
+        "of:0000c4393af44ba9" : {
+            "segmentrouting" : {
+                "name" : "AS5712-54X-1",
+                "ipv4NodeSid" : 151,
+                "ipv4Loopback" : "188.188.254.151",
+                "routerMac" : "c4:39:3a:f4:4b:a9",
+                "isEdgeRouter" : false,
+                "adjacencySids" : []
+            },
+            "basic" : {
+                "name": "AS5712-1",
+                "driver" : "ofdpa3"
+            }
+        },
+        "of:0000c4393af44bf3" : {
+            "segmentrouting" : {
+                "name" : "AS5712-54X-2",
+                "ipv4NodeSid" : 152,
+                "ipv4Loopback" : "188.188.254.152",
+                "routerMac" : "c4:39:3a:f4:4b:f3",
+                "isEdgeRouter" : true,
+                "adjacencySids" : []
+            },
+            "basic" : {
+                "name": "AS5712-2",
+                "driver" : "ofdpa3"
+            }
+        },
+        "of:0000c4393af44019" : {
+            "segmentrouting" : {
+                "name" : "AS5712-54X-3",
+                "ipv4NodeSid" : 153,
+                "ipv4Loopback" : "188.188.254.153",
+                "routerMac" : "c4:39:3a:f4:40:19",
+                "isEdgeRouter" : true,
+                "adjacencySids" : []
+            },
+            "basic" : {
+                "name": "AS5712-3",
+                "driver" : "ofdpa3"
+            }
+        }
+    }
+}
